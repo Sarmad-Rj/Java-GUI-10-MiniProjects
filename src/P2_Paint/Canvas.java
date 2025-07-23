@@ -57,7 +57,6 @@ public class Canvas extends JPanel {
                 currentPath.add(new ColorPoint(color, x, y, strokeSize));
                 paths.add(currentPath);
                 repaint();
-
             }
 
             @Override
@@ -75,7 +74,6 @@ public class Canvas extends JPanel {
                 // used to be able to draw a new line
                 currentPath.add(new ColorPoint(color, x, y, strokeSize));
                 repaint();
-
             }
         };
 
@@ -125,5 +123,4 @@ public class Canvas extends JPanel {
             JOptionPane.showMessageDialog(this, "Error saving image: " + e.getMessage());
         }
     }
-
 }
