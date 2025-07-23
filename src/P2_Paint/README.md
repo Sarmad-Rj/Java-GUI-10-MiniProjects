@@ -32,7 +32,7 @@ A **simple yet fully functional Paint application built with Java Swing**, featu
 
 ## 🚀 Installation (Windows)
 
-1️⃣ Download the `PaintApp-1.0.exe` from [Releases](https://drive.google.com/file/d/17CVDc66PzNLj52hGGXE05m-BmnHfQgOJ/view?usp=drive_link).  
+1️⃣ Download the `Paint-1.0.exe` from [Releases](https://drive.google.com/file/d/17CVDc66PzNLj52hGGXE05m-BmnHfQgOJ/view?usp=drive_link).  
 2️⃣ Run the installer.  
 3️⃣ Choose your installation directory.  
 4️⃣ Optionally add a **Desktop shortcut** and Start Menu entry.  
