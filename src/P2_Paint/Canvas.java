@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Canvas extends JPanel {
+    private List<List<ColorPoint>> paths = new ArrayList<>();
+
     private final static int STROKE_SIZE = 5;
     private int strokeSize = STROKE_SIZE;
 
@@ -15,7 +17,7 @@ public class Canvas extends JPanel {
         this.strokeSize = strokeSize;
     }
 
-    // use to draw a line between pints
+    // use to draw a line between points
     private List<ColorPoint> currentPath;
 
     // color of the dots
@@ -27,7 +29,7 @@ public class Canvas extends JPanel {
     // canvas
     private int canvasWidth, canvasHeight;
 
-    public Canvas(int targetWidth, int targetHeight){
+    public Canvas(int targetWidth, int targetHeight) {
         super();
         setOpaque(true);
         setBackground(Color.WHITE);
@@ -45,14 +47,11 @@ public class Canvas extends JPanel {
                 y = e.getY();
 
                 // draw in current mouse location
-                Graphics g = getGraphics();
-                g.setColor(color);
-                g.fillRect(x, y, strokeSize, strokeSize);
-                g.dispose();
+                currentPath = new ArrayList<>(25);
+                currentPath.add(new ColorPoint(color, x, y, strokeSize));
+                paths.add(currentPath);
+                repaint();
 
-                // strat current path
-                currentPath = new ArrayList<>( 25);
-                currentPath.add(new ColorPoint(color, x, y));
             }
 
             @Override
@@ -68,22 +67,9 @@ public class Canvas extends JPanel {
                 y = e.getY();
 
                 // used to be able to draw a new line
-                Graphics2D g2d = (Graphics2D) getGraphics();
-                g2d.setStroke(new BasicStroke(strokeSize));
-                g2d.setColor(color);
-                if(!currentPath.isEmpty()){
-                    ColorPoint prevPoint = currentPath.get(currentPath.size() - 1);
-                    g2d.setStroke (new BasicStroke (strokeSize));
+                currentPath.add(new ColorPoint(color, x, y, strokeSize));
+                repaint();
 
-                    // connect the current point to the previous point to draw a line
-                    g2d.drawLine(prevPoint.getX(), prevPoint.getY(), x, y);
-                }
-
-                g2d.dispose();
-
-                // add the new point to the path
-                ColorPoint nextPoint = new ColorPoint(color, e.getX(), e.getY());
-                currentPath.add(nextPoint);
             }
         };
 
@@ -91,18 +77,29 @@ public class Canvas extends JPanel {
         addMouseMotionListener(ma);
     }
 
-    public void setColor(Color color){
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public void resetCanvas(){
-        Graphics g = getGraphics();
-        g.clearRect(x, y, canvasWidth, canvasHeight);
-        g.dispose();
-
+    public void resetCanvas() {
+        paths.clear();
         currentPath = null;
-
         repaint();
-        revalidate();
+
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+        for (List<ColorPoint> path : paths) {
+            for (int i = 1; i < path.size(); i++) {
+                ColorPoint p1 = path.get(i - 1);
+                ColorPoint p2 = path.get(i);
+                g2d.setColor(p1.getColor());
+                g2d.setStroke(new BasicStroke(p1.getStrokeSize()));
+                g2d.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+            }
+        }
     }
 }
