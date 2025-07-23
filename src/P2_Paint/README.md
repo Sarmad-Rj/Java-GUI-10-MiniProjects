@@ -20,7 +20,7 @@ A **simple yet fully functional Paint application built with Java Swing**, featu
 ## 📸 Screenshots
 
 > Drawing interface
- <img width="1493" height="897" alt="image" src="https://github.com/user-attachments/assets/5895a990-ee1f-4954-830e-8e7f0c35fb2a" /> 
+ <img width="1493" height="897" alt="image" src="https://github.com/user-attachments/assets/5895a990-ee1f-4954-830e-8e7f0c35fb2a" />.
 > Color picker
 <img width="1502" height="907" alt="image" src="https://github.com/user-attachments/assets/be4cf974-a5e0-4a1c-8733-e0c4fd7a3dc5" /> 
 > Saved image example
