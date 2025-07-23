@@ -20,13 +20,13 @@ A **simple yet fully functional Paint application built with Java Swing**, featu
 ## 📸 Screenshots
 
 > Drawing interface
- <img width="1493" height="897" alt="image" src="https://github.com/user-attachments/assets/5895a990-ee1f-4954-830e-8e7f0c35fb2a" />.
+- <img width="1493" height="897" alt="image" src="https://github.com/user-attachments/assets/5895a990-ee1f-4954-830e-8e7f0c35fb2a" />
 > Color picker
-<img width="1502" height="907" alt="image" src="https://github.com/user-attachments/assets/be4cf974-a5e0-4a1c-8733-e0c4fd7a3dc5" /> 
+- <img width="1502" height="907" alt="image" src="https://github.com/user-attachments/assets/be4cf974-a5e0-4a1c-8733-e0c4fd7a3dc5" /> 
 > Saved image example
-<img width="1503" height="902" alt="image" src="https://github.com/user-attachments/assets/47fcb7c8-7ced-4a32-928b-a6104a89cdc6" /> 
+- <img width="1503" height="902" alt="image" src="https://github.com/user-attachments/assets/47fcb7c8-7ced-4a32-928b-a6104a89cdc6" /> 
 > App icon on Windows
-<img width="476" height="267" alt="image" src="https://github.com/user-attachments/assets/e4ad4439-7c88-4fe3-bb29-d514fa0bbefe" />
+- <img width="476" height="267" alt="image" src="https://github.com/user-attachments/assets/e4ad4439-7c88-4fe3-bb29-d514fa0bbefe" />
 
 ---
 
