@@ -1,5 +1,5 @@
 
-### Requirements
+#### Requirements
 - Java JDK 17+ (tested with JDK 24)
 - IntelliJ IDEA (or any IDE)
 - WiX Toolset (for `.exe` packaging with `jpackage`)
