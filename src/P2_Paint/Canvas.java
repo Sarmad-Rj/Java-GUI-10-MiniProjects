@@ -89,7 +89,6 @@ public class Canvas extends JPanel {
         paths.clear();
         currentPath = null;
         repaint();
-
     }
 
     @Override
