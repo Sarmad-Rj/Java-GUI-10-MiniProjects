@@ -1,0 +1,74 @@
+
+### Requirements
+- Java JDK 17+ (tested with JDK 24)
+- IntelliJ IDEA (or any IDE)
+- WiX Toolset (for `.exe` packaging with `jpackage`)
+- https://youtu.be/bahKaYSuPTI?si=C80ObYU_nklCWzUC
+
+Step-by-step in IntelliJ IDEA:
+✅ a) Build your project
+Build → Build Project (or Ctrl+F9) to compile your project cleanly.
+
+✅ b) Configure Artifacts
+Go to:
+File → Project Structure → Artifacts
+Click the + icon → JAR → From modules with dependencies.
+Select your main class.
+
+Check:
+Extract to the target JAR
+Include your compiled output(or tests).
+Click OK.
+
+✅ c) Build the .jar
+Go to:
+Build → Build Artifacts → Build
+(this will make a jar file, to confirm you can check "C:\Users\Hp\IdeaProjects\Paint\out\artifacts\Paint_jar" and double click on the jar file and it will run, you can share this also bbut for this, the user must hava java installed, otherwise continue to make exe file)
+
+✅ d) Install WiX Toolset (Required for .exe packaging)
+Download WiX Toolset (v3.x recommended)(link to download: https://github.com/wixtoolset/wix3/releases/tag/wix3141rtm).
+Install it.
+(You can add the bin path to system env if you want)
+
+✅ e) Use jpackage to Create .exe
+A. Prepare:
+  1. Ensure your icon .ico is ready: 
+     C:\Users\Sarmad\IdeaProjects\Paint\src\icon\paint.ico
+  2. Confirm your .jar path:
+     C:\Users\Sarmad\IdeaProjects\Paint\out\artifacts\Paint_jar\Paint.jar
+
+B. Open Command Prompt:(You can also open terminal in IntelliJ with the path of jar folder, if not then..)
+Run:
+     cd "C:\Users\Sarmad\IdeaProjects\Paint\out\artifacts\Paint_jar"
+
+C. Run jpackage:
+jpackage ^
+  --input . ^
+  --name PaintApp ^
+  --main-jar Paint.jar ^
+  --main-class P2_Paint.App ^
+  --icon "C:\Users\Sarmad\IdeaProjects\Paint\src\icon\paint.ico" ^
+  --type exe ^
+  --win-dir-chooser ^
+  --win-shortcut ^
+  --win-menu
+
+What each flag does:
+--input .: Folder containing the .jar.
+--name PaintApp: Name of the app.
+--main-jar Paint.jar: Your jar file.
+--main-class P2_Paint.App: Entry point.
+--icon: App icon for the installer and app.
+--type exe: Generates a Windows .exe installer.
+--win-dir-chooser: Lets the user choose the install directory.
+--win-shortcut: Creates a desktop/start menu shortcut.
+--win-menu: Adds to the Windows Start Menu.
+
+✅ f)Test Your Installer
+After building, you will see:
+PaintApp-1.0.exe (Right in the jar folder.)
+(YourAppName-Version.exe)
+
+✅ g) Share or Upload
+You can now:
+Upload your PaintApp-1.0.exe to Google Drive for sharing. (Double click and it will install your app. Search it in windows and You can use it)
