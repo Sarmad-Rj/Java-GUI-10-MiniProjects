@@ -7,6 +7,12 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
+
+
 public class Canvas extends JPanel {
     private List<List<ColorPoint>> paths = new ArrayList<>();
 
@@ -102,4 +108,22 @@ public class Canvas extends JPanel {
             }
         }
     }
+
+    public void saveCanvasAsImage(File file) {
+        // Create a BufferedImage the size of the canvas
+        BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+        // Paint the current canvas onto the BufferedImage
+        Graphics2D g2d = image.createGraphics();
+        this.paint(g2d); // or paintAll(g2d);
+        g2d.dispose();
+
+        try {
+            // Write the image to the chosen file as PNG
+            ImageIO.write(image, "png", file);
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error saving image: " + e.getMessage());
+        }
+    }
+
 }

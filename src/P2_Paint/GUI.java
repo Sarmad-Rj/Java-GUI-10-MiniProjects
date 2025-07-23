@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class GUI extends JFrame {
     public GUI() {
@@ -76,5 +77,29 @@ public class GUI extends JFrame {
         springLayout.putConstraint(SpringLayout.NORTH, resetButton, 10, SpringLayout.NORTH, canvasPanel);
         springLayout.putConstraint(SpringLayout.WEST, resetButton, 210, SpringLayout.WEST, canvasPanel);
         this.getContentPane().add(canvasPanel);
+
+        // 5. Save Button
+        JButton saveButton = new JButton("SAVE");
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Save Canvas as Image");
+                int userSelection = fileChooser.showSaveDialog(null);
+                if (userSelection == JFileChooser.APPROVE_OPTION) {
+                    File fileToSave = fileChooser.getSelectedFile();
+                    // Ensure it has a .png extension
+                    if (!fileToSave.getName().toLowerCase().endsWith(".png")) {
+                        fileToSave = new File(fileToSave.getAbsolutePath() + ".png");
+                    }
+                    canvas.saveCanvasAsImage(fileToSave);
+                    JOptionPane.showMessageDialog(null, "Image saved successfully!");
+                }
+            }
+        });
+        canvasPanel.add(saveButton);
+        springLayout.putConstraint(SpringLayout.NORTH, saveButton, 10, SpringLayout.NORTH, canvasPanel);
+        springLayout.putConstraint(SpringLayout.WEST, saveButton, 300, SpringLayout.WEST, canvasPanel);
+
     }
 }
