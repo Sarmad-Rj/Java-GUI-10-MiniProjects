@@ -14,8 +14,7 @@ public class GUI extends JFrame {
         pack();
         setLocationRelativeTo(null);
 
-        // Set a light, clean background for the main frame
-        getContentPane().setBackground(new Color(240, 240, 240)); // Light grey/off-white
+        getContentPane().setBackground(new Color(240, 240, 240));
 
         addGuiComponents();
     }
@@ -24,7 +23,7 @@ public class GUI extends JFrame {
         JPanel canvasPanel = new JPanel();
         SpringLayout springLayout = new SpringLayout();
         canvasPanel.setLayout(springLayout);
-        canvasPanel.setBackground(new Color(240, 240, 240)); // Match frame background
+        canvasPanel.setBackground(new Color(240, 240, 240));
 
         // 1. Canvas
         Canvas canvas = new Canvas(1500, 1000);
@@ -34,7 +33,7 @@ public class GUI extends JFrame {
         springLayout.putConstraint(SpringLayout.EAST, canvas, -10, SpringLayout.EAST, canvasPanel);
         springLayout.putConstraint(SpringLayout.SOUTH, canvas, -10, SpringLayout.SOUTH, canvasPanel);
         canvas.setBackground(Color.WHITE); // Ensure the drawing area is clearly white
-        canvas.setBorder(BorderFactory.createLineBorder(new Color(180, 180, 180), 1)); // Subtle border for the canvas
+        canvas.setBorder(BorderFactory.createLineBorder(new Color(180, 180, 180), 1));
 
         // 2. Color chooser
 
