@@ -1,10 +1,12 @@
 package P2_Paint;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 public class GUI extends JFrame {
     public GUI() {
@@ -14,6 +16,14 @@ public class GUI extends JFrame {
         pack();
         setLocationRelativeTo(null);
 
+        // Set window icon
+        try {
+            setIconImage(ImageIO.read(getClass().getResource("/icon/paint.png")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Set a light, clean background for the main frame
         getContentPane().setBackground(new Color(240, 240, 240));
 
         addGuiComponents();
@@ -23,7 +33,7 @@ public class GUI extends JFrame {
         JPanel canvasPanel = new JPanel();
         SpringLayout springLayout = new SpringLayout();
         canvasPanel.setLayout(springLayout);
-        canvasPanel.setBackground(new Color(240, 240, 240));
+        canvasPanel.setBackground(new Color(240, 240, 240)); // Match frame background
 
         // 1. Canvas
         Canvas canvas = new Canvas(1500, 1000);
@@ -33,10 +43,17 @@ public class GUI extends JFrame {
         springLayout.putConstraint(SpringLayout.EAST, canvas, -10, SpringLayout.EAST, canvasPanel);
         springLayout.putConstraint(SpringLayout.SOUTH, canvas, -10, SpringLayout.SOUTH, canvasPanel);
         canvas.setBackground(Color.WHITE); // Ensure the drawing area is clearly white
-        canvas.setBorder(BorderFactory.createLineBorder(new Color(180, 180, 180), 1));
+        canvas.setBorder(BorderFactory.createLineBorder(new Color(180, 180, 180), 1)); // Subtle border for the canvas
+
+        // 1.5 My name
+        JLabel authorLabel = new JLabel("Paint By Sarmad");
+        authorLabel.setFont(new Font("Dialog", Font.BOLD, 16));
+        authorLabel.setForeground(new Color(100, 100, 100)); // subtle gray
+        canvasPanel.add(authorLabel);
+        springLayout.putConstraint(SpringLayout.NORTH, authorLabel, 10, SpringLayout.NORTH, canvasPanel);
+        springLayout.putConstraint(SpringLayout.EAST, authorLabel, -25, SpringLayout.EAST, canvasPanel);
 
         // 2. Color chooser
-
         JButton colorChooseButton = new JButton("Choose Color");
         colorChooseButton.addActionListener(new ActionListener() {
             @Override
@@ -99,6 +116,5 @@ public class GUI extends JFrame {
         canvasPanel.add(saveButton);
         springLayout.putConstraint(SpringLayout.NORTH, saveButton, 10, SpringLayout.NORTH, canvasPanel);
         springLayout.putConstraint(SpringLayout.WEST, saveButton, 300, SpringLayout.WEST, canvasPanel);
-
     }
 }
