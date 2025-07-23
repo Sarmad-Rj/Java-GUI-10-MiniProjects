@@ -12,14 +12,6 @@ public class CalculatorService {
         this.num2 = num2;
     }
 
-    public double getNum1() {
-        return num1;
-    }
-
-    public double getNum2() {
-        return num2;
-    }
-
     public void setMathSymbol(char mathSymbol) {
         this.mathSymbol = mathSymbol;
     }
