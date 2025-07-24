@@ -3,52 +3,33 @@ package P4_To_Do_List;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-/**
- * Clean, modern To-Do List using Java Swing + OOP + File I/O
- * Features:
- * - Add task (auto current date)
- * - Mark as done
- * - Delete task
- * - Shows title and due date clearly
- * - Fixed row height, consistent UI
- *
- * Professional enhancements:
- * - Modern color scheme
- * - Improved font usage
- * - Better spacing and padding
- * - Iconography for delete button (though still using 'X' for simplicity)
- * - Checkbox and Delete button background color matches task row
- * - Subtle hover effects (optional, requires more advanced Swing concepts for all elements)
- */
-public class Gui extends JFrame {
+public class GUI extends JFrame {
     private TaskManager taskManager;
     private JPanel taskListPanel;
 
     // Define a professional color palette
-    private static final Color PRIMARY_COLOR = new Color(76, 175, 80); // Green for headers/buttons
-    private static final Color BACKGROUND_COLOR = new Color(245, 245, 245); // Light grey for background
-    private static final Color CARD_BACKGROUND_COLOR = Color.WHITE; // White for task cards
-    private static final Color DONE_TASK_COLOR = new Color(230, 255, 230); // Lighter green for done tasks
-    private static final Color TEXT_COLOR = new Color(50, 50, 50); // Dark grey for general text
-    private static final Color SUBDUED_TEXT_COLOR = new Color(120, 120, 120); // Medium grey for dates/subtext
-    private static final Color DELETE_BUTTON_COLOR = new Color(220, 50, 50); // Red for delete button
+    private static final Color PRIMARY_COLOR = new Color(76, 175, 80);
+    private static final Color BACKGROUND_COLOR = new Color(245, 245, 245);
+    private static final Color CARD_BACKGROUND_COLOR = Color.WHITE;
+    private static final Color DONE_TASK_COLOR = new Color(230, 255, 230);
+    private static final Color TEXT_COLOR = new Color(50, 50, 50);
+    private static final Color SUBDUED_TEXT_COLOR = new Color(120, 120, 120);
+    private static final Color DELETE_BUTTON_COLOR = new Color(220, 50, 50);
 
     // Define modern fonts
     private static final Font HEADER_FONT = new Font("Segoe UI", Font.BOLD, 28);
     private static final Font BUTTON_FONT = new Font("Segoe UI", Font.BOLD, 16);
     private static final Font TASK_TITLE_FONT = new Font("Segoe UI", Font.BOLD, 14);
-    private static final Font TASK_DATE_FONT = new Font("Segoe UI", Font.PLAIN, 10);
 
-    public Gui() {
+    public GUI() {
         // Initialize
         taskManager = new TaskManager();
         setTitle("To Do List Application");
-        setSize(400, 650); // Slightly increased height for better spacing
+        setSize(400, 650);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
@@ -59,27 +40,27 @@ public class Gui extends JFrame {
         // Header
         JLabel headerLabel = new JLabel("TO DO LIST", SwingConstants.CENTER);
         headerLabel.setFont(HEADER_FONT);
-        headerLabel.setForeground(PRIMARY_COLOR); // Use primary color for header
-        headerLabel.setBorder(new EmptyBorder(20, 0, 15, 0)); // Add padding
+        headerLabel.setForeground(PRIMARY_COLOR);
+        headerLabel.setBorder(new EmptyBorder(20, 0, 15, 0));
         add(headerLabel, BorderLayout.NORTH);
 
         // Task list panel inside scroll pane
         taskListPanel = new JPanel();
         taskListPanel.setLayout(new BoxLayout(taskListPanel, BoxLayout.Y_AXIS));
-        taskListPanel.setBackground(BACKGROUND_COLOR); // Match background
+        taskListPanel.setBackground(BACKGROUND_COLOR);
         JScrollPane scrollPane = new JScrollPane(taskListPanel);
-        scrollPane.setBorder(BorderFactory.createEmptyBorder()); // Remove default scroll pane border
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.getVerticalScrollBar().setUnitIncrement(16); // Smooth scrolling
+        scrollPane.getVerticalScrollBar().setUnitIncrement(16);
         add(scrollPane, BorderLayout.CENTER);
 
         // Add Task button
         JButton addTaskButton = new JButton("ADD TASK");
         addTaskButton.setFont(BUTTON_FONT);
-        addTaskButton.setBackground(PRIMARY_COLOR); // Use primary color
-        addTaskButton.setForeground(Color.WHITE); // White text on button
-        addTaskButton.setFocusPainted(false); // Remove focus border
-        addTaskButton.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0)); // Add vertical padding
+        addTaskButton.setBackground(PRIMARY_COLOR);
+        addTaskButton.setForeground(Color.WHITE);
+        addTaskButton.setFocusPainted(false);
+        addTaskButton.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
         addTaskButton.addActionListener(e -> addTask());
         add(addTaskButton, BorderLayout.SOUTH);
 
@@ -89,9 +70,6 @@ public class Gui extends JFrame {
         setVisible(true);
     }
 
-    /**
-     * Refreshes the task list display
-     */
     private void refreshTaskList() {
         taskListPanel.removeAll();
         List<Task> tasks = taskManager.getTasks();
@@ -100,33 +78,28 @@ public class Gui extends JFrame {
             JLabel noTasksLabel = new JLabel("No tasks yet! Add one below.", SwingConstants.CENTER);
             noTasksLabel.setFont(new Font("Segoe UI", Font.ITALIC, 14));
             noTasksLabel.setForeground(SUBDUED_TEXT_COLOR);
-            taskListPanel.add(Box.createVerticalGlue()); // Push to center vertically
+            taskListPanel.add(Box.createVerticalGlue()); // used to Push to center vertically
             taskListPanel.add(noTasksLabel);
             taskListPanel.add(Box.createVerticalGlue());
         } else {
             for (Task task : tasks) {
                 JPanel row = createTaskRow(task);
                 taskListPanel.add(row);
-                taskListPanel.add(Box.createVerticalStrut(8)); // Add a small vertical space between tasks
+                taskListPanel.add(Box.createVerticalStrut(8)); // add a small vertical space between tasks
             }
         }
         taskListPanel.revalidate();
         taskListPanel.repaint();
     }
 
-    /**
-     * Creates a clean task row panel
-     * @param task The task to display
-     * @return JPanel representing the task row
-     */
     private JPanel createTaskRow(Task task) {
         JPanel panel = new JPanel(new BorderLayout(10, 5));
         panel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(new Color(220, 220, 220), 1), // Subtle border
-                new EmptyBorder(10, 15, 10, 15) // Inner padding
+                BorderFactory.createLineBorder(new Color(220, 220, 220), 1),
+                new EmptyBorder(10, 15, 10, 15)
         ));
-        panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 70)); // Slightly increased height
-        panel.setAlignmentX(Component.LEFT_ALIGNMENT); // Align to left in BoxLayout
+        panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 70));
+        panel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         // Color for done tasks (set here so components can inherit/match)
         if (task.isDone()) {
@@ -146,7 +119,7 @@ public class Gui extends JFrame {
         panel.add(checkBox, BorderLayout.WEST);
 
         // Title and date label (center)
-        String displayTitle = task.getTitle().length() > 30 // Allow slightly longer titles
+        String displayTitle = task.getTitle().length() > 30
                 ? task.getTitle().substring(0, 27) + "..."
                 : task.getTitle();
 
@@ -164,16 +137,16 @@ public class Gui extends JFrame {
                     SUBDUED_TEXT_COLOR.getRed() + "," + SUBDUED_TEXT_COLOR.getGreen() + "," + SUBDUED_TEXT_COLOR.getBlue() + ";font-size:10px;font-family:Segoe UI;'>Due: " +
                     task.getDueDate() + "</span></html>");
         }
-        titleLabel.setToolTipText(task.getTitle()); // Still show full title on hover
+        titleLabel.setToolTipText(task.getTitle());
         panel.add(titleLabel, BorderLayout.CENTER);
 
         // Delete button (right)
         JButton deleteButton = new JButton("X");
         deleteButton.setFont(new Font("Segoe UI", Font.BOLD, 14));
         deleteButton.setForeground(DELETE_BUTTON_COLOR);
-        deleteButton.setBackground(panel.getBackground()); // <--- IMPORTANT: Set button BG to panel BG
+        deleteButton.setBackground(panel.getBackground()); // <--- IMPORTANT: Set button BG to panel BG!!!
         deleteButton.setFocusPainted(false);
-        deleteButton.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10)); // Padding
+        deleteButton.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
         deleteButton.addActionListener(e -> {
             int confirm = JOptionPane.showConfirmDialog(panel,
                     "Are you sure you want to delete this task?", "Delete Task",
@@ -188,14 +161,11 @@ public class Gui extends JFrame {
         return panel;
     }
 
-    /**
-     * Adds a new task using current date automatically
-     */
     private void addTask() {
         JTextField titleField = new JTextField();
         titleField.setFont(TASK_TITLE_FONT);
 
-        JPanel inputPanel = new JPanel(new GridLayout(0, 1, 5, 5)); // Add spacing
+        JPanel inputPanel = new JPanel(new GridLayout(0, 1, 5, 5));
         inputPanel.add(new JLabel("Task Title:"));
         inputPanel.add(titleField);
 
@@ -204,8 +174,8 @@ public class Gui extends JFrame {
         UIManager.put("Panel.background", BACKGROUND_COLOR);
         UIManager.put("OptionPane.messageFont", TASK_TITLE_FONT);
         UIManager.put("Button.font", BUTTON_FONT);
-        UIManager.put("Button.background", PRIMARY_COLOR); // Apply to dialog buttons
-        UIManager.put("Button.foreground", Color.WHITE); // Apply to dialog buttons text
+        UIManager.put("Button.background", PRIMARY_COLOR);
+        UIManager.put("Button.foreground", Color.WHITE);
 
         int result = JOptionPane.showConfirmDialog(this, inputPanel, "Add New Task",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);

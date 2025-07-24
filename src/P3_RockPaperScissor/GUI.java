@@ -39,10 +39,10 @@ public class GUI extends JFrame implements ActionListener {
 
     public GUI() {
         super("Rock Paper Scissors");
-        setSize(440, 480); // Slightly adjusted height
+        setSize(440, 480);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setResizable(false); // Often good for simple games to maintain design integrity
+        setResizable(false);
 
         // Load custom fonts
         loadFonts();
@@ -58,9 +58,7 @@ public class GUI extends JFrame implements ActionListener {
     // Method to load custom fonts from resources
     private void loadFonts() {
         try {
-            // Example of loading a font from resources (e.g., a 'fonts' folder in your project)
-            // You'd need to add a .ttf or .otf file to your project resources
-            InputStream is = getClass().getResourceAsStream("/fonts/Montserrat-Bold.ttf"); // Example path
+            InputStream is = getClass().getResourceAsStream("/fonts/Montserrat-Bold.ttf");
             if (is != null) {
                 Font baseFont = Font.createFont(Font.TRUETYPE_FONT, is);
                 GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -72,7 +70,7 @@ public class GUI extends JFrame implements ActionListener {
                 choiceFont = baseFont.deriveFont(Font.BOLD, 50f); // Larger for "?"
                 dialogFont = baseFont.deriveFont(Font.BOLD, 16f);
             } else {
-//                System.err.println("Font file not found. Using default fonts.");
+                System.err.println("Font file not found. Using default fonts.");
                 setDefaultFonts();
             }
         } catch (FontFormatException | IOException e) {
@@ -95,7 +93,7 @@ public class GUI extends JFrame implements ActionListener {
         // Use GridBagLayout for flexible and professional alignment
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10); // Padding between components
+        gbc.insets = new Insets(10, 10, 10, 10);
 
         // --- Header ---
         JLabel titleLabel = new JLabel("Rock Paper Scissors!");
@@ -114,7 +112,7 @@ public class GUI extends JFrame implements ActionListener {
         computerScoreLabel.setHorizontalAlignment(SwingConstants.CENTER);
         computerScoreLabel.setForeground(SECONDARY_ACCENT); // Orange for computer
         gbc.gridy = 1;
-        gbc.weighty = 0; // Don't stretch vertically
+        gbc.weighty = 0;
         add(computerScoreLabel, gbc);
 
         // --- Computer Choice Display ---
@@ -122,11 +120,11 @@ public class GUI extends JFrame implements ActionListener {
 //        computerChoiceLabel.setFont(choiceFont);
         computerChoiceLabel.setFont(new Font("Dialog", Font.BOLD, 25));
         computerChoiceLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        computerChoiceLabel.setPreferredSize(new Dimension(100, 100)); // Fixed size
-        computerChoiceLabel.setOpaque(true); // Make background visible
-        computerChoiceLabel.setBackground(TEXT_LIGHT); // White background for the choice box
-        computerChoiceLabel.setForeground(TEXT_DARK); // Dark text for the choice
-        computerChoiceLabel.setBorder(BorderFactory.createLineBorder(BORDER_COLOR, 2, true)); // Rounded border
+        computerChoiceLabel.setPreferredSize(new Dimension(100, 100));
+        computerChoiceLabel.setOpaque(true);
+        computerChoiceLabel.setBackground(TEXT_LIGHT);
+        computerChoiceLabel.setForeground(TEXT_DARK);
+        computerChoiceLabel.setBorder(BorderFactory.createLineBorder(BORDER_COLOR, 2, true));
         gbc.gridy = 2;
 //        gbc.weighty = 0.3; // Give it more vertical space
         add(computerChoiceLabel, gbc);
@@ -169,23 +167,22 @@ public class GUI extends JFrame implements ActionListener {
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
         button.setFont(buttonFont);
-        button.setBackground(PRIMARY_ACCENT); // Green button
-        button.setForeground(TEXT_LIGHT); // White text
-        button.setFocusPainted(false); // No ugly focus border
+        button.setBackground(PRIMARY_ACCENT);
+        button.setForeground(TEXT_LIGHT);
+        button.setFocusPainted(false);
         button.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(PRIMARY_ACCENT.darker(), 1), // Subtle darker border
-                new EmptyBorder(15, 25, 15, 25) // Inner padding
+                BorderFactory.createLineBorder(PRIMARY_ACCENT.darker(), 1),
+                new EmptyBorder(15, 25, 15, 25)
         ));
-        button.setCursor(new Cursor(Cursor.HAND_CURSOR)); // Hand cursor on hover
+        button.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        // Optional: Add hover effect (more advanced, often requires custom UI or listener)
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button.setBackground(BUTTON_HOVER_COLOR); // Change color on hover
+                button.setBackground(BUTTON_HOVER_COLOR);
             }
 
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                button.setBackground(PRIMARY_ACCENT); // Revert on exit
+                button.setBackground(PRIMARY_ACCENT);
             }
         });
 
@@ -194,13 +191,13 @@ public class GUI extends JFrame implements ActionListener {
 
     // Displays a message dialog which will show the winner and a try again button to play again
     private void showDialog(String message) {
-        JDialog resultDialog = new JDialog(this, "Game Over", true); // More generic title
-        resultDialog.setSize(300, 180); // Adjusted size for better appearance
+        JDialog resultDialog = new JDialog(this, "Game Over", true);
+        resultDialog.setSize(300, 180);
         resultDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         resultDialog.setResizable(false);
-        resultDialog.setLayout(new BorderLayout(10, 10)); // Add spacing
+        resultDialog.setLayout(new BorderLayout(10, 10));
         resultDialog.getContentPane().setBackground(BACKGROUND_LIGHT);
-        resultDialog.getRootPane().setBorder(new EmptyBorder(10, 10, 10, 10)); // Dialog padding
+        resultDialog.getRootPane().setBorder(new EmptyBorder(10, 10, 10, 10));
 
         // Message label
         JLabel resultLabel = new JLabel(message);
@@ -211,7 +208,7 @@ public class GUI extends JFrame implements ActionListener {
 
         // Try again button
         JButton tryAgainButton = new JButton("Play Again?");
-        tryAgainButton.setFont(buttonFont.deriveFont(Font.PLAIN, 16f)); // Slightly smaller font for dialog button
+        tryAgainButton.setFont(buttonFont.deriveFont(Font.PLAIN, 16f));
         tryAgainButton.setBackground(PRIMARY_ACCENT);
         tryAgainButton.setForeground(TEXT_LIGHT);
         tryAgainButton.setFocusPainted(false);
