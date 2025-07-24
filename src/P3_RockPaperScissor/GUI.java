@@ -22,13 +22,13 @@ public class GUI extends JFrame implements ActionListener {
     RockPaperScissor rockPaperScissor;
 
     // --- Modern Color Palette ---
-    private static final Color BACKGROUND_LIGHT = new Color(240, 242, 245); // Very light grey/blue for main background
-    private static final Color PRIMARY_ACCENT = new Color(60, 179, 113); // Medium Sea Green - strong accent
-    private static final Color SECONDARY_ACCENT = new Color(255, 160, 0); // Orange - for computer score
-    private static final Color TEXT_DARK = new Color(50, 50, 50); // Dark grey for general text
-    private static final Color TEXT_LIGHT = Color.WHITE; // White for text on colored buttons
-    private static final Color BORDER_COLOR = new Color(180, 180, 180); // Light grey for borders
-    private static final Color BUTTON_HOVER_COLOR = new Color(70, 190, 120); // Slightly darker green for hover
+    private static final Color BACKGROUND_LIGHT = new Color(240, 242, 245);
+    private static final Color PRIMARY_ACCENT = new Color(60, 179, 113);
+    private static final Color SECONDARY_ACCENT = new Color(255, 160, 0);
+    private static final Color TEXT_DARK = new Color(50, 50, 50);
+    private static final Color TEXT_LIGHT = Color.WHITE;
+    private static final Color BORDER_COLOR = new Color(180, 180, 180);
+    private static final Color BUTTON_HOVER_COLOR = new Color(70, 190, 120);
 
     // --- Custom Fonts (Optional but highly recommended for professional look) ---
     private Font headerFont;
@@ -39,7 +39,7 @@ public class GUI extends JFrame implements ActionListener {
 
     public GUI() {
         super("Rock Paper Scissors");
-        setSize(450, 600); // Slightly adjusted height
+        setSize(440, 480); // Slightly adjusted height
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false); // Often good for simple games to maintain design integrity
@@ -104,7 +104,7 @@ public class GUI extends JFrame implements ActionListener {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 3; // Span across all three columns
-        gbc.weighty = 0.1; // Give it some vertical space
+//        gbc.weighty = 0.1; // Give it some vertical space
         gbc.anchor = GridBagConstraints.CENTER;
         add(titleLabel, gbc);
 
@@ -119,7 +119,8 @@ public class GUI extends JFrame implements ActionListener {
 
         // --- Computer Choice Display ---
         computerChoiceLabel = new JLabel("?");
-        computerChoiceLabel.setFont(choiceFont);
+//        computerChoiceLabel.setFont(choiceFont);
+        computerChoiceLabel.setFont(new Font("Dialog", Font.BOLD, 25));
         computerChoiceLabel.setHorizontalAlignment(SwingConstants.CENTER);
         computerChoiceLabel.setPreferredSize(new Dimension(100, 100)); // Fixed size
         computerChoiceLabel.setOpaque(true); // Make background visible
@@ -127,7 +128,7 @@ public class GUI extends JFrame implements ActionListener {
         computerChoiceLabel.setForeground(TEXT_DARK); // Dark text for the choice
         computerChoiceLabel.setBorder(BorderFactory.createLineBorder(BORDER_COLOR, 2, true)); // Rounded border
         gbc.gridy = 2;
-        gbc.weighty = 0.3; // Give it more vertical space
+//        gbc.weighty = 0.3; // Give it more vertical space
         add(computerChoiceLabel, gbc);
 
         // --- Player Score Label ---
@@ -136,7 +137,7 @@ public class GUI extends JFrame implements ActionListener {
         playerScoreLabel.setHorizontalAlignment(SwingConstants.CENTER);
         playerScoreLabel.setForeground(PRIMARY_ACCENT); // Green for player
         gbc.gridy = 3;
-        gbc.weighty = 0; // Don't stretch vertically
+//        gbc.weighty = 0; // Don't stretch vertically
         add(playerScoreLabel, gbc);
 
         // --- Player Buttons Panel ---
@@ -159,7 +160,7 @@ public class GUI extends JFrame implements ActionListener {
         buttonPanel.add(scissorButton);
 
         gbc.gridy = 4;
-        gbc.weighty = 0.3; // Give buttons panel some vertical space
+//        gbc.weighty = 0.3; // Give buttons panel some vertical space
         gbc.anchor = GridBagConstraints.SOUTH; // Align to bottom
         add(buttonPanel, gbc);
     }
@@ -232,6 +233,7 @@ public class GUI extends JFrame implements ActionListener {
         resultDialog.add(dialogButtonPanel, BorderLayout.SOUTH);
 
         resultDialog.setLocationRelativeTo(this);
+        resultDialog.setLocation(750, 320);
         resultDialog.setVisible(true);
     }
 
