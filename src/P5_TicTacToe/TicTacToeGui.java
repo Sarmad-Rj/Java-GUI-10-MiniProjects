@@ -8,11 +8,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class TicTacToeGui extends JFrame implements ActionListener {
-    // xScore - holds the score value for the x player
-    // oScore - holds the score value for the o player
-    // moveCounter - counts the number of moves (used to determine if there is a draw)
     private int xScore, oScore, moveCounter;
-
     // isPlayerOne - flag to indicate if the current player is player x or not
     private boolean isPlayerOne;
 
@@ -90,7 +86,6 @@ public class TicTacToeGui extends JFrame implements ActionListener {
                 button.setBackground(CommonConstants.BACKGROUND_COLOR);
                 button.addActionListener(this);
                 button.setBorder(BorderFactory.createLineBorder(CommonConstants.BOARD_COLOR));
-
 
                 // add button to board
                 board[i][j] = button;
