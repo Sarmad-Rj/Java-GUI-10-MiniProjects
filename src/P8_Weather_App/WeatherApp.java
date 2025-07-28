@@ -184,7 +184,7 @@ public class WeatherApp {
         return 0;
     }
 
-    private static String getCurrentTime(){
+    public static String getCurrentTime(){
         // get current date and time
         LocalDateTime currentDateTime = LocalDateTime.now();
 
