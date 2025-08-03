@@ -57,10 +57,101 @@ My friend [Ikram](https://github.com/Softcode777) for the cross-stack collab—b
 You can connect with him [here](https://www.linkedin.com/in/ikram-ullah-khan-niazi-02b373329/).
 
 ---
-## ScreenShots
+## ScreenShots (click to expand)
+<details>
+<summary>1. 🖌️ Paint App Screenshots </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details>
+<details>
+<summary>2. 🖌️ Calculator </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details>
+<details>
+<summary>3. Rock Paper Scissors  </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>4. To-Do List Manager  </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>5. Tic Tac Toe  </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>6. Password Generator & Manager  </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>7. Weather App  </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>8. Morse Code Translator  </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>9.Chat App (GUI + CLI) </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details><details>
+<summary>10.  Hangman Game </summary>
+<p float="left">
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/All.png" width="30%"/>
+</p>
+</details>
 
-*
-*
+
+---
+## Live Preview
+All of em are available to watch on my linkedIn 
+
+* [Day 1](https://www.linkedin.com/posts/sarmad-rj-1505and12_java-javaswing-programming-activity-7353789741697265665-IMkQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADo90pkBOcPM5XxpDcFQKxNzSGjORUWns4s)
+* [Day 2](https://www.linkedin.com/posts/sarmad-rj-1505and12_java-oop-javaswing-activity-7354374868374630403-6RsA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADo90pkBOcPM5XxpDcFQKxNzSGjORUWns4s)
+* [Day 3](https://www.linkedin.com/posts/sarmad-rj-1505and12_java-javaswing-github-activity-7354744799800844290-PIiF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADo90pkBOcPM5XxpDcFQKxNzSGjORUWns4s)
+* [Day 4](https://www.linkedin.com/posts/sarmad-rj-1505and12_java-apis-swing-activity-7355150584552812544-QtO-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADo90pkBOcPM5XxpDcFQKxNzSGjORUWns4s)
+* [Day 5](https://www.linkedin.com/posts/sarmad-rj-1505and12_java-100daysofcode-javaswing-activity-7355582870653960194-cdcg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADo90pkBOcPM5XxpDcFQKxNzSGjORUWns4s)
 
 ---
 
