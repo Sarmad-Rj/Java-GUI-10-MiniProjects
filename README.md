@@ -61,91 +61,78 @@ You can connect with him [here](https://www.linkedin.com/in/ikram-ullah-khan-nia
 <details>
 <summary>1. 🖌️ Paint App Screenshots </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/1.1.png" width="30%"/>
+  <img src="src/resources/SS/1.2.png" width="30%"/>
+  <img src="src/resources/SS/1.3.png" width="30%"/>
+  <img src="src/resources/SS/1.4.png" width="30%"/>
 </p>
 </details>
 <details>
 <summary>2. 🧮 Calculator </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/2.png" width="30%"/>
 </p>
 </details>
 <details>
 <summary>3. ✊✋✌️ Rock Paper Scissors  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/3.1.png" width="30%"/>
+  <img src="src/resources/SS/3.2.png" width="30%"/>
+  <img src="src/resources/SS/3.3.png" width="30%"/>
 </p>
 </details>
 <details>
 <summary>4. 📝 To-Do List Manager  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/4.1.png" width="30%"/>
+  <img src="src/resources/SS/4.2.png" width="30%"/>
+  <img src="src/resources/SS/4.3.png" width="30%"/>
 </p>
 </details>
 <details>
 <summary>5. ❌⭕ Tic Tac Toe  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/5.1.png" width="30%"/>
+  <img src="src/resources/SS/5.2.png" width="30%"/>
 </p>
 </details>
 <details>
 <summary>6. 🔐 Password Generator & Manager  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/6.1.png" width="30%"/>
+  <img src="src/resources/SS/6.2.png" width="30%"/>
+  <img src="src/resources/SS/6.3.png" width="30%"/>
+  <img src="src/resources/SS/6.4.png" width="30%"/>
+  <img src="src/resources/SS/6.5.png" width="30%"/>
+  <img src="src/resources/SS/6.6.png" width="30%"/>
 </p>
 </details>
 <details>
   <summary>7. 📡 Morse Code Translator  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/7.png" width="30%"/>
 </p>
 </details>
 <details>
 <summary>8 🌦️ Weather App  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/8.1.png" width="30%"/>
+  <img src="src/resources/SS/8.2.png" width="30%"/>
+  <img src="src/resources/SS/8.3.png" width="30%"/>
 </p>
 </details>
 <details>
-<summary>9. 💬 Chat App (GUI + CLI) </summary>
+<summary>9. 🎯 Hangman Game  </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/9.1.png" width="30%"/>
+  <img src="src/resources/SS/9.2.png" width="30%"/>
+  <img src="src/resources/SS/9.3.png" width="30%"/>
 </p>
 </details>
 <details>
-<summary>10. 🎯 Hangman Game </summary>
+<summary>10. 💬 Chat App (GUI + CLI) </summary>
 <p float="left">
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
-  <img src="src/resources/All.png" width="30%"/>
+  <img src="src/resources/SS/10.png" width="30%"/>
 </p>
 </details>
 
