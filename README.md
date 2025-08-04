@@ -68,7 +68,7 @@ You can connect with him [here](https://www.linkedin.com/in/ikram-ullah-khan-nia
 </p>
 </details>
 <details>
-<summary>2. 🖌️ Calculator </summary>
+<summary>2. 🧮 Calculator </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
@@ -77,63 +77,70 @@ You can connect with him [here](https://www.linkedin.com/in/ikram-ullah-khan-nia
 </p>
 </details>
 <details>
-<summary>3. Rock Paper Scissors  </summary>
+<summary>3. ✊✋✌️ Rock Paper Scissors  </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>4. To-Do List Manager  </summary>
+</details>
+<details>
+<summary>4. 📝 To-Do List Manager  </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>5. Tic Tac Toe  </summary>
+</details>
+<details>
+<summary>5. ❌⭕ Tic Tac Toe  </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>6. Password Generator & Manager  </summary>
+</details>
+<details>
+<summary>6. 🔐 Password Generator & Manager  </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>7. Weather App  </summary>
+</details>
+<details>
+  <summary>7. 📡 Morse Code Translator  </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>8. Morse Code Translator  </summary>
+</details>
+<details>
+<summary>8 🌦️ Weather App  </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>9.Chat App (GUI + CLI) </summary>
+</details>
+<details>
+<summary>9. 💬 Chat App (GUI + CLI) </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
 </p>
-</details><details>
-<summary>10.  Hangman Game </summary>
+</details>
+<details>
+<summary>10. 🎯 Hangman Game </summary>
 <p float="left">
   <img src="src/resources/All.png" width="30%"/>
   <img src="src/resources/All.png" width="30%"/>
